@@ -4,10 +4,9 @@
 
 
 ## Features
-- Encode text into carrier files (e.g., image or text files).
+- Encode text into image files.
 - Decode messages hidden inside files.
 - Simple, modular structure for easy extension and customization.
-- CMake-based build system for cross-platform compatibility.
 
 
 ## Build Instructions
