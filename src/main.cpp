@@ -24,7 +24,7 @@ auto help() -> void {
             << "-d, --decrypt \"file\" \"key/length\"      Extracts a hidden message using the given key ("
             << GREEN << "png" << RESET << ") or message length (" << GREEN << "bmp/dib" << RESET << ")\n"
             << "-e, --encrypt \"file\" \"message\" \"key\"   Embeds the given message into the file using the provided key ("
-            << GREEN << "png only" << RESET << ")\n"
+            << GREEN << "key png only" << RESET << ")\n"
             << "-h, --help                             Displays this help message\n"
             << "-i, --info \"file\"                      Checks whether the file is readable and writable by the program\n"
             << std::endl;
