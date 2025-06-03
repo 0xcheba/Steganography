@@ -4,7 +4,7 @@
 
 
 ## Features
-- Encode text into image files.
+- Encode text into `.png` and .`bmp`/`.dib` files.
 - Decode messages hidden inside files.
 - Simple, modular structure for easy extension and customization.
 
@@ -35,8 +35,39 @@
    ```
 5. Run the program:
    ```bash
-   ./stegano
+   ./steganography
    ```
+
+## Usage
+steganography \[option\] \<file\> \[message\] \[key/length\]
+This program supports only `.png` and `.bmp`/`.dib` file formats.
+
+-c, --check "file" "message"                Checks whether the file can store the given message
+-d, --decrypt "file" "key/length"         Extracts a hidden message using the given key (`.png`) or message length (`.bmp`/`.dib`)
+-e, --encrypt "file" "message" "key"   Embeds the given message into the file using the provided key (.png only)
+-h, --help                                            Displays the help message
+-i, --info "file"                                     Checks whether the file is readable and writable by the program
+
+## Examples
+```Shell
+./steganography -c "./picture.bmp" "some message"
+```
+Checks if this message can be used for steganography in the file.
+
+```Shell
+./steganography -e "./picture.png" "some message" "1"
+```
+Hides the message into the file and encrypts the message with key `1`.
+
+```Shell
+./steganography -d "./secret.png" "1"
+```
+Extracts the message from the file and decrypts it with key `1`.
+
+```Shell
+./steganography -d "./secret.bmp" 20
+```
+Extracts 20 bytes of possible message from the file.
 
 
 ## License

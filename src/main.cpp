@@ -15,18 +15,18 @@ const std::string INVALID_ARGS = RED + "Invalid number of arguments!" + RESET;
 const std::string CAN_BE_USED = GREEN + "This file can be used for steganography!" + RESET;
 
 auto help() -> void {
-    std::cout << "\nUsage: stegano <option> <file> <optional: key/length>\n"
+    std::cout << "\nUsage: ./steganography [option] <file> [message] [key/length]\n"
             << "Writes or reads a secret message from an image file.\n"
-            << RED << "Warning!" << RESET << "This program supports only" << GREEN << ".png " << RESET << "and " << GREEN
+            << RED << "Warning! " << RESET << "This program supports only " << GREEN << ".png " << RESET << "and " << GREEN
             << ".bmp/.dib " << RESET << "file formats.\n\n"
             << "You should use at least one of the following options:\n"
-            << "-c, --check \"file\" \"message\"           Checks if the file can store the given message\n"
-            << "-d, --decrypt \"file\" \"key/length\"      Extracts the hidden message from the file with a given key ("
-            << GREEN << "png" << RESET << ") or length (" << GREEN << "bmp/dib" << RESET << ")\n"
-            << "-e, --encrypt \"file\" \"message\" \"key\"   Embeds the given message into the file with a given key ("
+            << "-c, --check \"file\" \"message\"           Checks whether the file can store the given message\n"
+            << "-d, --decrypt \"file\" \"key/length\"      Extracts a hidden message using the given key ("
+            << GREEN << "png" << RESET << ") or message length (" << GREEN << "bmp/dib" << RESET << ")\n"
+            << "-e, --encrypt \"file\" \"message\" \"key\"   Embeds the given message into the file using the provided key ("
             << GREEN << "png only" << RESET << ")\n"
-            << "-h, --help                             Displays this help menu\n"
-            << "-i, --info \"file\"                      Checks if the image file is writable/readable by the program\n"
+            << "-h, --help                             Displays this help message\n"
+            << "-i, --info \"file\"                      Checks whether the file is readable and writable by the program\n"
             << std::endl;
 }
 
