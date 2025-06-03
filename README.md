@@ -42,11 +42,14 @@
 steganography \[option\] \<file\> \[message\] \[key/length\]
 This program supports only `.png` and `.bmp`/`.dib` file formats.
 
--c, --check "file" "message"                Checks whether the file can store the given message
--d, --decrypt "file" "key/length"         Extracts a hidden message using the given key (`.png`) or message length (`.bmp`/`.dib`)
--e, --encrypt "file" "message" "key"   Embeds the given message into the file using the provided key (.png only)
--h, --help                                            Displays the help message
--i, --info "file"                                     Checks whether the file is readable and writable by the program
+| Flag                                 | Description                                                                              |
+| ------------------------------------ | ---------------------------------------------------------------------------------------- |
+| -c, --check "file" "message"         | Checks whether the file can store the given message                                      |
+| -d, --decrypt "file" "key/length"    | Extracts a hidden message using the given key (`.png`) or message length (`.bmp`/`.dib`) |
+| -e, --encrypt "file" "message" "key" | Embeds the given message into the file using the provided key (key .png only)            |
+| -h, --help                           | Displays the help message                                                                |
+| -i, --info "file"                    | Checks whether the file is readable and writable by the program                          |
+
 
 ## Examples
 ```Shell
